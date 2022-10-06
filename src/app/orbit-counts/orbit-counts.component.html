@@ -1,11 +1,16 @@
 <h3>Satellite Count:</h3>
 <div class="counts" >
-	<div >Total: <span>{{satellites.length}}</span></div>
+	<div *ngIf=" satellites.length >6">Total: <span>{{satellites.length}}</span></div>
+	<script>  
+
+
+	</script>
 	
-	<div *ngFor = 'let satellite of satellites'> {{satellite.name}} <span> {{countByType(satellite.type)}}</span></div>
+	<div *ngFor = 'let satellite of satellites' >{{satellite.type}}
+		 <span> {{countByType(satellite.type)}}</span></div>
 </div>
 
-
+<!-- -->
 
 
 
